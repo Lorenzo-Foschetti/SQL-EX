@@ -19,6 +19,11 @@
     esercizio 4 SELECT * FROM prodotti WHERE EXTRACT(YEAR FROM data_attivazione)
     = 2017 AND (in_produzione = true OR in_commercio = true)
     <hr />
-    esercizio 5
+    esercizio 5 SELECT * FROM fatture JOIN clienti ON fatture.id_cliente=
+    clienti.numero_cliente WHERE importo < 2000
+    <hr />
+
+    esercizio 6 SELECT numero_fattura, importo, iva, denominazione , data FROM
+    fatture JOIN fornitori USING(numero_fornitore)
   </body>
 </html>
